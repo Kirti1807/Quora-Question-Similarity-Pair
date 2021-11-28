@@ -1,20 +1,20 @@
 # Quora-Question-Similarity-Pair
 ### Predicting that 2 Quora question are similar or not 
-### Data source: https://www.kaggle.com/c/quora-question-pairs <br>
-### Python Libarary used: nltk , numpy, pandas , matplotlib , sklearn , seaborn <br>
-### Step performed <br>
-  ##### -> Data reading and basic data Exploration <br>
-  ##### -> Data Preprocessing <br>
-      . Lower the text <br>
-      . Replace number to string <br>
-      . Removing Urls and hash tags <br>
-      . Replaceing some special character to their string equalent <br>
-      . decontrate word  <br>
-      . Removing punctuations <br>
-      . Removing Stopword <br>
-      . Lemmatization <br>
-  ##### -> Feature Engineering <br>
-      . Added basic features by feature extraction from text <br>
+### Data source: https://www.kaggle.com/c/quora-question-pairs 
+### Python Libarary used: nltk , numpy, pandas , matplotlib , sklearn , seaborn 
+### Step performed 
+  ##### -> Data reading and basic data Exploration 
+  ##### -> Data Preprocessing 
+      . Lower the text 
+      . Replace number to string 
+      . Removing Urls and hash tags 
+      . Replaceing some special character to their string equalent 
+      . decontrate word 
+      . Removing punctuations 
+      . Removing Stopword 
+      . Lemmatization 
+  ##### -> Feature Engineering 
+      . Added basic features by feature extraction from text 
       . Added fuzzywuzzy features <br>
   ##### -> Exploratery Data Analysis <br>
       . Visualizing all features with respect to class <br>
