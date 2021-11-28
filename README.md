@@ -1,5 +1,5 @@
 # Quora-Question-Similarity-Pair
-### Predicting that 2 Quora question are similar or not <br>
+### Predicting that 2 Quora question are similar or not 
 ### Data source: https://www.kaggle.com/c/quora-question-pairs <br>
 ### Python Libarary used: nltk , numpy, pandas , matplotlib , sklearn , seaborn <br>
 ### Step performed <br>
