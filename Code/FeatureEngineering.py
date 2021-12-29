@@ -20,7 +20,11 @@ class FeatureEngineering:
         data_copy['length_of_q1'] = data_copy['question1'].apply(lambda text : len(text))
         
         data_copy['length_of_q2'] = data_copy['question2'].apply(lambda text : len(text))
-        
+        data_copy['length_of_q1_and_q2'] = data_copy.apply(lambda x : len(x.question1) + len(x.question2) , axis=1)   
+
+        data_copy['length_of_q1_and_q2_difference'] = data_copy['length_of_q1'] - data_copy['length_of_q2'] 
+        data_copy['length_of_q1_and_q2_difference'] = data_copy['length_of_q1_and_q2_difference'].apply(lambda x : abs(x)) 
+
         data_copy['total_number_of_words_in_q1'] = data_copy['question1'].apply(lambda text : len(nltk.word_tokenize(text)))
         
         data_copy['total_number_of_words_in_q2'] = data_copy['question2'].apply(lambda text : len(nltk.word_tokenize(text)))

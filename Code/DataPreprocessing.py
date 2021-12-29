@@ -33,7 +33,18 @@ class TextPreprocessing:
         
     
     def lower_text(self , text):
-        return text.lower().strip()
+        #print(type(text))
+        # if type(text) is not int:
+        #     # replece every soecial char with space
+        #     text = re.sub('[^a-zA-Z0-9\n]' , ' ' , text)
+        #     # replace multiple spaces with single space
+        #     text = re.sub('\s+' , ' ' , text)
+        #     # converting all the chars into lower-case.
+        #     text = text.lower()
+        text = text.lower()
+        return text
+
+        
     
     def remove_punctuation(self , text):
         text = text.translate(str.maketrans("", "", string.punctuation)) 

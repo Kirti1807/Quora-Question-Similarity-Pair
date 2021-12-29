@@ -20,7 +20,7 @@ class PrepareData:
         
         # Basic data exploration
         bde = BasicDataExploration(self.data)
-        bde.basic_data_exploration(self.data)
+        bde.basic_data_exploration()
         bde.basic_data_visualization(self.data)
 
         # Data preprocessing 
@@ -28,6 +28,8 @@ class PrepareData:
         data_ = tp.text_preprocessing(self.data , 'question1')
         data__ = tp.text_preprocessing(data_ , 'question2')
 
+        # I am a disco dancer and I like to dance. 
+        # kya bat hai sir XD
         # feature engineering
         fe = FeatureEngineering(data__)
         df = fe.feature_extraction(data__)
@@ -49,24 +51,8 @@ class PrepareData:
         data = vt.text_vectorization()
         result = vt.merging_features(df , data)
 
-        # removing null values from result data set
-        print(result.shape)
-        print(result.head())
-        print(result.isnull().sum().sum())
-        result = result.dropna()
-        print(result.shape)
-
-        # data splitting
-        result = result.drop('id' , axis=1)
-
-        X = result.drop('is_duplicate' , axis=1)
-        Y = result['is_duplicate']
-
-        #print(X.shape , Y.shape)
-        x_train , x_test , y_train , y_test = train_test_split(X , Y , test_size=0.3 , random_state=1)
-        # print(x_train.shape , x_test.shape , y_train.shape , y_test.shape)
-
-        return x_train , x_test , y_train , y_test
+        
+        return result
         
 
 

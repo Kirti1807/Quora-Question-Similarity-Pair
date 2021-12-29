@@ -7,7 +7,7 @@ import re
 import seaborn as sns
 from wordcloud import WordCloud
 from nltk.corpus import stopwords
-
+import joblib
 
 from numpy import vectorize
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -69,9 +69,10 @@ class Vectorizer:
             vecs2.append(mean_vec2)
         data_copy['q2_feats_m'] = list(vecs2)
 
+        joblib.dump(tfidf , "vectorizer.pkl")
         return data_copy
 
-    def merging_features(df,data_):
+    def merging_features(self, df,data_):
         
         df1 = df.drop(['qid1' , 'qid2' , 'question1' , 'question2'] , axis=1)
         df2 = data_.drop(['qid1' , 'qid2' , 'question1' , 'question2' , 'is_duplicate'], axis=1)
