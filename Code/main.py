@@ -83,7 +83,8 @@ def main():
     # evaluate_knn.plot_roc_curve(y_test , knn.predict_proba(x_test)[: , 1])
 
 
-
+if __name__ == "__main__":
+    main()
 
 
 
